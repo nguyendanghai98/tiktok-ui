@@ -15,13 +15,13 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import config from '~/config';
-import Button from '~/components/Button';
+import Button from '~/components/Button/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import Menu from '~/components/Popper/Menu';
-import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
-import Image from '~/components/Image';
-import Search from '../Search';
+import Menu from '~/components/Popper/Menu/Menu';
+import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons/Icons';
+import Image from '~/components/Image/Image';
+import Search from '../Search/Search';
 
 const cx = classNames.bind(styles);
 

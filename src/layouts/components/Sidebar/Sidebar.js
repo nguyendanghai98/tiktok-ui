@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import MenuItem from '~/components/Popper/Menu/MenuItem';
-import Button from '~/components/Button';
+import Button from '~/components/Button/Button';
 import styles from './Sidebar.module.scss';
 const cx = classNames.bind(styles);
 
