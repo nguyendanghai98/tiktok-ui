@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faHome,
@@ -38,7 +39,7 @@ function Sidebar() {
         [
             {
                 title: 'About',
-                href: '#',
+                href: 'https://www.tiktok.com/about',
             },
             {
                 title: 'Newsroom',
@@ -113,10 +114,12 @@ function Sidebar() {
     const renderItems = () => {
         return sidebarMenu.map((item, index) => {
             return (
-                <MenuItem
-                    key={index}
-                    data={item}
-                />
+                <NavLink className={(nav) => cx({ active: nav.isActive })} to={item.to}>
+                    <MenuItem
+                        key={index}
+                        data={item}
+                    />
+                </NavLink>
             );
         });
     };
@@ -124,7 +127,7 @@ function Sidebar() {
         return list.map((item, index) => (
             Array.isArray(item) ? (
                 <div key={index} className={cx('footer-link')}>
-                    {item.map((data, i) =>(
+                    {item.map((data, i) =>(              
                         <Button className={cx('link')} key={i} href={data.href}>{data.title}</Button>
                     ))}
                 </div>

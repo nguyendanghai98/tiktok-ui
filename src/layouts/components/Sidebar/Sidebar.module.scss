@@ -55,6 +55,9 @@
 
 .wrapper-item {
     margin-top: 15px;
+    .active *{
+        color: var(--primary);
+    }
 }
 
 .recomment-login,
